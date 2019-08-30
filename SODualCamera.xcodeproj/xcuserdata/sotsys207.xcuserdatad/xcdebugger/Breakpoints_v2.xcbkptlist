@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2CE69F33-792E-4A99-B26C-83BEBF362579"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB2683DD-3F96-478E-A515-EFF6DEDD4963"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SODualCamera/PiPMixer.metal"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "reporterMixer(texture2d&lt;half, access::read&gt; fullScreenInput [[ texture(0) ]], texture2d&lt;half, access::sample&gt; pipInput [[ texture(1) ]], texture2d&lt;half, access::write&gt; outputTexture [[ texture(2) ]], const device MixerParameters&amp; mixerParameters [[ buffer(0) ]], uint2 gid [[thread_position_in_grid]])"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24FBFB70-D688-4183-BBF0-252C533863AB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SODualCamera/PiPMixer.metal"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "reporterMixer(texture2d&lt;half, access::read&gt; fullScreenInput [[ texture(0) ]], texture2d&lt;half, access::sample&gt; pipInput [[ texture(1) ]], texture2d&lt;half, access::write&gt; outputTexture [[ texture(2) ]], const device MixerParameters&amp; mixerParameters [[ buffer(0) ]], uint2 gid [[thread_position_in_grid]])"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
