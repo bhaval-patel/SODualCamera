@@ -34,7 +34,6 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
      
     let dualVideoSessionOutputQueue = DispatchQueue(label: "dual video session data output queue")
 
-   
     let screenRecorder = RPScreenRecorder.shared()
 
     var isRecording = false
@@ -62,7 +61,6 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     
     
     //MARK:- User Permission for Dual Video Session
-
     //ask user permissin for recording video from device
     func dualVideoPermisson(){
         
@@ -102,12 +100,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
         }
     }
     
-    
-    
-
     //MARK:- Setup Dual Video Session
-
-    
     func setUp(){
         
         #if targetEnvironment(simulator)
@@ -433,7 +426,6 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     
     @objc func handleSingleTap(_ sender: UITapGestureRecognizer) {
         print("startScreenRecording")
-         
         guard screenRecorder.isAvailable else {
             print("Recording is not available at this time.")
             return
@@ -455,9 +447,7 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     }
     
      //MARK:- ReplayKit
-    
     func startRecord(){
-    
         screenRecorder.isMicrophoneEnabled = true
         screenRecorder.startRecording{ [unowned self] (error) in
             self.isRecording = true
@@ -467,8 +457,6 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
    
     
     func stopRecord(){
-        
-        
         screenRecorder.stopRecording { [unowned self] (preview, error) in
             print("Stopped recording")
             
@@ -523,13 +511,8 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
            dismiss(animated: true)
     }
-    
-  
-    
-    
+   
     //MARK:- Add and Handle Observers
-
-    
     func addNotifer() {
         
         // A session can run only when the app is full screen. It will be interrupted in a multi-app layout.
@@ -544,11 +527,11 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
     
     
     @objc func sessionWasInterrupted(notification: NSNotification) {
-            
+            print("Session was interrupted")
     }
         
     @objc func sessionInterruptionEnded(notification: NSNotification) {
-        
+        print("Session interrupt ended")
     }
         
     @objc func sessionRuntimeError(notification: NSNotification) {
@@ -565,22 +548,16 @@ class ViewController: UIViewController,AVCaptureVideoDataOutputSampleBufferDeleg
         to try to resume the session running.
         */
         if error.code == .mediaServicesWereReset {
-            
+            //Manage according to condition
         } else {
-           
+           //Manage according to condition
         }
     }
     
-    
-
-    
      //MARK:- AVCaptureOutput Delegate
-
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection){
     
     }
-    
-
 
 }
 
